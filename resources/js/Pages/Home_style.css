@@ -1,0 +1,25 @@
+p.home-custom-fsize {
+    font-size: 18px;
+}
+
+.home-mt-30 {
+    margin-top: 30px;
+}
+
+.home-mb-footer-324 {
+    margin-bottom: 324px;
+}
+
+.home-custom-button {
+    margin-top: 15px;
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+.home-custom-button:hover {
+    background-color: lightGray;
+}
+
+.home-page {
+    display: inline-block;
+}
