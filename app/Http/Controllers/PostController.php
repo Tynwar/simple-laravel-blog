@@ -4,18 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
-use Illuminate\View\View;
+use Inertia\Inertia;
+use Inertia\Response;
+
 
 class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\View
      */
-    public function index(): View
+    public function index(): Response
     {
-        return view('posts.index');
+        return Inertia::render('Posts/Index', [
+            //
+        ]);
     }
 
     /**
