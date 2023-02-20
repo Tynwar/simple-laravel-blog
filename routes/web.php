@@ -21,6 +21,13 @@ Route::get('/', function () {
     return Inertia::render('Home', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
+    ]);
+});
+
+Route::get('/welcome', function () {
+    return Inertia::render('Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
@@ -29,6 +36,14 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/*', function () {
+    return Inertia::render('Page_not_found');
+});
+
+Route::get('/About_us', function () {
+    return Inertia::render('About_us');
+});
 
 Route::resource('posts', PostController::class)
     ->only(['index', 'store'])

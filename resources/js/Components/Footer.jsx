@@ -105,7 +105,7 @@ export default function Footer() {
 						</div>
 						
 						<div>
-							<a className="text-light" href="">About us</a>
+							<a className="text-light" href="/About_us">About us</a>
 						</div>
 						
 						<div>

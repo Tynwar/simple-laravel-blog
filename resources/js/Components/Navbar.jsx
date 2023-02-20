@@ -21,7 +21,7 @@ export default function Navbar() {
 							</Link>
 						</li>
 						<li className="nav-item">
-							<Link className="btn btn-outline-secondary custom-btn-nav" onClick={() => {window.location.href="/about_us"}}>
+							<Link className="btn btn-outline-secondary custom-btn-nav" onClick={() => {window.location.href="/About_us"}}>
 								About us
 							</Link>
 						</li>
