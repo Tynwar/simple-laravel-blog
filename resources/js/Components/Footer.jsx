@@ -119,7 +119,7 @@ export default function Footer() {
 				</div>
 
 				<div className="container-fluid p-3 text-light bgcolor-copyright">
-					Copyright © 2023 Sprawdzacz cen
+					Copyright © 2023
 				</div>
 
 			</footer>
