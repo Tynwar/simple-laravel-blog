@@ -68,9 +68,17 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function update(Request $request, Post $post): RedirectResponse
     {
-        //
+        $this->authorize('update', $post);
+
+        $validated = $request->validate([
+            'message' => 'required|string|max:255',
+        ]);
+
+        $post->update($validated);
+
+        return redirect(route('posts.index'));
     }
 
     /**
@@ -80,10 +88,7 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
-    {
-        //
-    }
+
 
     /**
      * Remove the specified resource from storage.
